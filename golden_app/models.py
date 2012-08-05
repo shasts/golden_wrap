@@ -19,13 +19,13 @@ class Product(models.Model):
     addons = models.ManyToManyField(Addon)
 
     def _unicode_(self):
-        return name
+        return self.name
 
 class User(models.Model):
     email_id = models.EmailField(max_length = 75)
 
     def _unicode_(self):
-        return email_id
+        return self.email_id
 
 
 class Item(models.Model):
@@ -35,5 +35,5 @@ class Item(models.Model):
     product = models.OneToOneField(Product)
 
     def _unicode_(self):
-        return product.name
+        return self.product.name
 
