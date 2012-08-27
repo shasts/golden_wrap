@@ -5,5 +5,5 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('golden_app.views',
-    url(r'^$', 'index')  
+	(r'^$', 'index')     
 )

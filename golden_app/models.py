@@ -36,4 +36,3 @@ class Item(models.Model):
 
     def _unicode_(self):
         return self.product.name
-

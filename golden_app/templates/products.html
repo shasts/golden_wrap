@@ -1,0 +1,22 @@
+{% include "base.html" %}
+{% load bootstrap_toolkit %}	
+{% block content %}
+  	<div class="container">
+		{% if product_list %} 
+	   		<ul class="thumbnails">
+		      {% for product in product_list %}	
+             	<li class="span2">     
+               	<a href="#" class="thumbnail">   
+                <img id="thumbnail_image" src="{{MEDIA_URL}}{{product.thumbnail}}" alt=""/>                                    
+                </a>                 
+            	</li>
+		      {% endfor %}
+	   		</ul>
+		{% else %}
+			<div class="span12">
+				<span class="label label-warning">No Products available.</span> 
+			</div>
+		{% endif %}
+	</div>
+{% endblock %}
+{% include "footer.html" %}
