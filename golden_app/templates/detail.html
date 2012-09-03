@@ -1,0 +1,48 @@
+{% include "base.html" %}
+{% load bootstrap_toolkit %}	
+{% block content %}
+<form method="post" action="/products/add/">{% csrf_token %}  
+        <div class="container">
+		<div class="page-header"	
+			<h1> {{product.name}}</h1>
+		</div>
+		<ul class="thumbnails">
+        	<div class="row">
+            	<div class="span4">
+              		<a href="#" class="thumbnail">
+                		<img id="thumbnail_image" src="{{MEDIA_URL}}{{product.product_image}}" alt="">
+              		</a>
+         		</div>         	
+         		<div class="span4">
+         			<h5>{{product.long_description}}</h5>                    
+         		</div>         	
+         		<div class="span3"> 
+         			<div class="row">         				
+         					<h5>The description on the ordering and shipping process can go here. Or any offers or interesting stuff!</h5>         				
+         			</div>
+         			<div class="row">    
+         				<div class="row">   
+         				      				
+         					<div class="span1"> 
+         						<h5>Quantity</h5>         				
+         					</div>
+         					<div class="span2">
+         						<div class="input-append">         					
+         							<input class="span1" size="8" type="text">         				       			        		      		       					
+         							<button class="btn" type="submit">Add</button>
+         						</div>
+         					</div>         				
+         				</div>
+         			</div>   		 						  				
+         		</div>   
+         	</div>      	
+         </ul>
+          <ul class="thumbnails">
+         	<div class="span12">
+         		<h3>Addons and what other customer bought, Reviews can go here, Or any other interesting things.</h3>
+         	</div>
+         </ul>    
+         </div>  
+</form>
+{% endblock %}
+{% include "footer.html" %}
