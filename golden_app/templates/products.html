@@ -6,7 +6,7 @@
 	   		<ul class="thumbnails">
 		      {% for product in product_list %}	
              	<li class="span2">     
-               	<a href="#" class="thumbnail">   
+               	<a href="{% url 'golden_app.views.detail' product.id %}" class="thumbnail">   
                 <img id="thumbnail_image" src="{{MEDIA_URL}}{{product.thumbnail}}" alt=""/>                                    
                 </a>                 
             	</li>

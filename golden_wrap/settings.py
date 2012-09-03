@@ -119,7 +119,8 @@ INSTALLED_APPS = (
     'golden_app',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    'bootstrap_toolkit'
+    'bootstrap_toolkit',
+    'cart'
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
